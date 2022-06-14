@@ -190,7 +190,10 @@ bar {
 exec_always xrandr --output Virtual1 --mode 1280x720
 
 # Setup wallpaper
-exec_always feh --bg-scale /home/pxhoussem/Images/wallpaper.jpg
+exec_always feh --bg-fill /home/pxhoussem/Images/wallpaper.jpg
+
+# Picom
+exec_always --no-startup-id picom -f --config /home/pxhoussem/.config/picom/picom.conf &
 
 ## Setup programs default workspace
 # Terminal on workspace 1
