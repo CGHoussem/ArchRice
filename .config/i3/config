@@ -14,6 +14,7 @@ set $mod Mod4
 # Gaps
 gaps inner 10
 gaps outer 5
+gaps top 30
 
 # delete titlebars
 for_window [class=".*"] border pixel 3
@@ -205,8 +206,13 @@ exec_always feh --bg-fill /home/pxhoussem/Pictures/wallpaper.jpg
 # Picom
 exec_always --no-startup-id picom -f --config /home/pxhoussem/.config/picom/picom.conf &
 
+# Polybar
+exec_always --no-startup-id /home/pxhoussem/.config/polybar/launch.sh &
+
 ## Setup programs default workspace
 # Terminal on workspace 1
 assign [class="Alacritty"] $ws1
 # Firefox on workspace 2
 assign [class="firefox"] $ws2
+# Thunderbird on workspace
+assign [class="Thunderbird"] $ws9
