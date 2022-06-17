@@ -16,4 +16,5 @@
 .xsession-errors.old
 .lesshst
 .thunderbird
-
+Scripts/
+.config/mimeapps.list
