@@ -124,7 +124,7 @@ bindsym Print exec "scrot '%Y-%m-%d-%a.png' --border --delay 1 -e 'mv $f ~/Pictu
 set $ws1 "1: Terminals "
 set $ws2 "2: Firefox "
 set $ws3 "3: Editor "
-set $ws4 "4"
+set $ws4 "4: Thunderbird "
 set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
@@ -214,4 +214,4 @@ assign [class="Alacritty"] $ws1
 # Firefox on workspace 2
 assign [class="firefox"] $ws2
 # Thunderbird on workspace
-assign [class="Thunderbird"] $ws9
+assign [class="Thunderbird"] $ws4
