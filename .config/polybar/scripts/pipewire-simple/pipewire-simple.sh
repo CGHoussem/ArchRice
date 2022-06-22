@@ -1,14 +1,14 @@
 #!/bin/sh
 
 getDefaultSink() {
-    defaultSink=$(pactl info | awk -F : '/Default Sink:/{print $2}')
+    defaultSink=$(pactl get-default-sink) 
     description=$(pactl list sinks | sed -n "/${defaultSink}/,/Description/p; /Description/q" | sed -n 's/^.*Description: \(.*\)$/\1/p')
     echo "${description}"
 }
 
 getDefaultSource() {
-    defaultSource=$(pactl info | awk -F : '/Default Source:/{print $2}')
-    description=$(pactl list sources | sed -n "/${defaultSource}/,/Description/p; /Description/q" | sed -n 's/^.*Description: \(.*\)$/\1/p')
+    defaultSource=$(pactl get-default-source)
+    description=$(pactl list sources | sed -n "/${defaultSource}/,/Description/p;" | sed -n 's/^.*Description: \(.*\)$/\1/p')
     echo "${description}"
 }
 
@@ -27,5 +27,15 @@ case $1 in
         pamixer --toggle-mute
         ;;
     *)
-        echo "Source: ${SOURCE} | Sink: ${VOLUME} ${SINK}"
+
+    #echo "${SOURCE} | ${VOLUME} ${SINK}"
+
+    if [ ${VOLUME} = 'muted' ]; then
+	echo ""
+    else
+	echo "${VOLUME} "
+    fi
+
 esac
+
+
