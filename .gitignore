@@ -11,10 +11,15 @@
 .fehbg
 .git
 .mozilla
-.vim
 .Xauthority
 .xsession-errors.old
 .lesshst
 .thunderbird
 Scripts/
 .config/mimeapps.list
+.histfile
+.shell.pre*
+.wget*
+.zcomp*
+.zsh_history
+.zshrc.*
