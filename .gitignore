@@ -24,3 +24,4 @@ Scripts/
 .zsh_history
 .zshrc.*
 .vim/.net*
+.oh-my-zsh/
